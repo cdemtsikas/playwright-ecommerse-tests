@@ -1,0 +1,14 @@
+//Compile all .ts files in this project and every subfolder
+
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": ["ES2020", "dom"]
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
