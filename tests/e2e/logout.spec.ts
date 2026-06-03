@@ -1,4 +1,4 @@
-import { test, expect } from './fixtures/base.fixture';
+import { test, expect } from '../../fixtures/base.fixture';
 
 const dashboardUrl = 'https://aatp.vercel.app/dashboard';
 const loginButton = '[data-test-id="login-button"]';

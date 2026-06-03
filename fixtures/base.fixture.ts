@@ -1,6 +1,7 @@
 import { test as base, type Page } from '@playwright/test';
+import { CheckoutPage } from '../pages/CheckoutPage';
 
-export const test = base.extend<{ authenticatedPage: Page }>({
+export const test = base.extend<{ authenticatedPage: Page; checkoutPage: CheckoutPage }>({
     // This runs before every test automatically
     authenticatedPage: async ({ page }, use) => {
         // Navigate to login
@@ -17,6 +18,10 @@ export const test = base.extend<{ authenticatedPage: Page }>({
         // Now pass the authenticated page to your test
         await use(page);
     },
+    checkoutPage: async ({ page }, use) => {
+        const checkoutPage = new CheckoutPage(page);
+        await use(checkoutPage);
+    }
 });
 
 export { expect } from '@playwright/test';
