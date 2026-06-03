@@ -1,4 +1,4 @@
-import { expect, test } from './fixtures/base.fixture';
+import { expect, test } from '../../fixtures/base.fixture';
 
 const addToCartButton = '[data-test-id="add-to-cart-button"]';
 const cartButton = '[data-test-id="cart-button"]';
